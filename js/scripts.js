@@ -14,6 +14,7 @@ function substitute(number){
   }
 }
 
+//business logic
 function hasNumber(number){
   let numberString = number.toString();
   if(numberString.includes("3")){
@@ -30,13 +31,20 @@ function hasNumber(number){
   }
 }
 
-//business logic
+function beepBoop(sequence){
+  let noPunctuation = sequence.replace(/[\D]/g, " ");
+  let numberArray = noPunctuation.split(" ");
+  substitutedArray = numberArray.map(function(number){
+    return " " + hasNumber(number);
+  });
+  return substitutedArray;
+} 
 
 //UI logic
 $(document).ready(function(){
   $("#formOne").submit(function(event){
-    let userNumber = parseInt($("#numberInput").val());
-    let answer = hasNumber(userNumber);
+    let userNumber = $("#numberInput").val();
+    let answer = beepBoop(userNumber);
     $("#result").html(answer);
     
     event.preventDefault();
