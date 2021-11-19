@@ -12,3 +12,15 @@ function substitute(number){
     return number;
   }
 }
+
+
+$(document).ready(function(){
+  $("#formOne").submit(function(event){
+    let userNumber = parseInt($("#numberInput").val());
+    let substituteAnswer = substitute(userNumber);
+    $("#result").html(substituteAnswer);
+    
+    event.preventDefault();
+  })
+
+});
