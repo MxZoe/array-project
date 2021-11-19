@@ -1,0 +1,38 @@
+.container-fluid{
+  background-color: #1E7DAC;
+  min-height: 100vh;
+}
+
+.container{
+  background-color: white;
+  min-height: 100vh;
+}
+
+#titleBox{
+  text-align: center;
+  background-color: white;
+  border: 5px solid #E41A0F;
+  border-radius: 10%;
+  padding: 5%;
+  margin-bottom: 2%;
+}
+
+#submitButton{
+  background-color: white;
+  margin-top: 1%;
+  border: 2px solid #E41A0F;
+}
+
+#submitButton:hover{
+  background-color: rgb(225, 225, 245);
+}
+
+#submitButton:focus{
+  background-color: rgb(225, 225, 245);
+  border: 3px solid #E41A0F;
+}
+
+#numberInput{
+  border: 2px solid #E41A0F;
+}
+
