@@ -8,10 +8,6 @@ ________________________________________________________________________________
 Describe: substitute() 
 Takes a single digit number and returns a "beep" for ones, "boop" for twos and "won't you be my neighbor?" for threes.
 
-Test: It should take a number and return that number
-Code: substitute(4567)
-Expected Output:4567
-
 Test: It should return a with a "Beep" when given a 1 as input
 Code: beepBoop(1);
 Expected Output: "Beep"
@@ -31,28 +27,34 @@ Test: It should take a number and return that number
 Code: hasNumber(4567)
 Expected Output:4567
 
-Test: It should return a 1 if a single digit number contains a 1
-Code: hasNumber(1)
-Expected Output: 1
+Test: It should return substitute(1) if a single digit number contains a 1
+Code: hasNumber(1);
+let hasOne = substitute(1);
+Expected Output: Beep
 
-Test: It should return a 1 if a multiple digit number contains a 1
-Code: hasNumber(10)
-Expected Output: 1
+Test: It should return substitute(1) if a multiple digit number contains a 1
+Code: hasNumber(10);
+let hasOne = substitute(1);
+Expected Output: Boop
 
-Test: It should return a 2 if a single digit number contain a 2
-Code: hasNumber(2)
-Expected Output: 2
+Test: It should return substitute(2) if a single digit number contain a 2
+Code: hasNumber(2);
+let hasTwo = substitute(2);
+Expected Output: boop
 
-Test:return a 2 if a multiple digit number contains a 2
-Code: hasNumber(20)
-Expected Output: 2
+Test:return substitute(2)if a multiple digit number contains a 2
+Code: hasNumber(20);
+let hasTwo = substitute(2);
+Expected Output: boop
 
-Test:return a 3 if a single digit number contain a 3
-Code: hasNumber(3)
-Expected Output: 3
+Test:return substitute(3) if a single digit number contain a 3
+Code: hasNumber(3);
+let hasThree = substitute(3);
+Expected Output: Won't you be my neighbor?
 
-Test:return a 3 if a multiple digit number contains a 3
-Code: hasNumber(30)
+Test:return substitute(3) if a multiple digit number contains a 3
+Code: hasNumber(30);
+let hasThree = substitute(3);
 Expected Output: 3
 
 _________________________________________________________________________________________________
