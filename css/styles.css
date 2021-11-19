@@ -36,3 +36,12 @@
   border: 2px solid #E41A0F;
 }
 
+#result{
+  margin-top: 2%;
+  font-size: larger;
+}
+
+#inputLabel{
+  margin: 1%;
+  font-size: larger;
+}

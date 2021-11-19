@@ -14,7 +14,6 @@ function substitute(number){
   }
 }
 
-//business logic
 function hasNumber(number){
   let numberString = number.toString();
   if(numberString.includes("3")){
@@ -31,6 +30,7 @@ function hasNumber(number){
   }
 }
 
+//business logic
 function beepBoop(sequence){
   let noPunctuation = sequence.replace(/[\D]/g, " ");
   let numberArray = noPunctuation.split(" ");
@@ -45,8 +45,11 @@ $(document).ready(function(){
   $("#formOne").submit(function(event){
     let userNumber = $("#numberInput").val();
     let answer = beepBoop(userNumber);
+    if(userNumber === ""){
+      $("#result").html("Please enter one or more numbers!");
+    }
     $("#result").html(answer);
-    
+    $("#numberInput").val("");
     event.preventDefault();
   })
 
