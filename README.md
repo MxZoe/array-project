@@ -3,7 +3,49 @@ Create a web application that takes a number from the user and returns a range o
 Numbers that contain a 1: all digits are replaced (all digits) with "Beep!"
 Numbers that contain a 2: all digits are replaced (all digits) with "Boop!"
 Numbers that contain a 3: all digits are replaced (all digits) with "Won't you be my neighbor?"
+
+# Array and Looping Independant Project
+
+#### By _**{List of contributors}**
+
+#### A web application that takes a number from the user and returns a range of numbers from 0 to the user inputted number with the substitutions for numbers containing a 1, 2, or 3 within the returned range.
+
+
+
+## Technologies Used
+
+* HTML
+* CSS
+* Bootstrap
+* Javascript
+* jQuery
+
+## Description
+
+A web application that takes a number from the user and returns a range of numbers from 0 to the user inputted number with the substitutions for numbers containing a 1, 2, or 3 within the returned range.
+
+Numbers that contain a 1: all digits are replaced (all digits) with "Beep!"
+Numbers that contain a 2: all digits are replaced (all digits) with "Boop!"
+Numbers that contain a 3: all digits are replaced (all digits) with "Won't you be my neighbor?"
+
+## Setup/Installation Requirements
+
+Go to https://github.com/MxZoe/array-project to see the code and files for this project. From there you can clone, fork or download your own copy of the code.
+
+You can also go to mxzoe.github.io/array-project to see the website in action.
+
+## Known Bugs
+
+* no known bugs
+
+## License
+
+https://opensource.org/licenses/MIT
+
+Copyright (c) 2021 Zoe Weinstein
 _________________________________________________________________________________________________
+
+## Tests
 
 Describe: substitute() 
 Takes a single digit number and returns a "beep" for ones, "boop" for twos and "won't you be my neighbor?" for threes.
@@ -60,16 +102,19 @@ Expected Output: 3
 _________________________________________________________________________________________________
 
 Describe: beepBoop()
-takes an array and replaces any number that has a digit of 1 with "beep", 2 with "boop" and 3 with won't you be my neighbor
+takes an number and  create a range from 0 to the number. It will replace any number that has a digit of 1 with "beep", 2 with "boop" and 3 with won't you be my neighbor
 
-Test: Takes a sequence of numbers and outputs it as an array
-Code: beepBoop("1, 2, 3")
-Expected Output: [1 , 2, 3]
+Test: Create an array of numbers from 0 to the inputed number
+Code: beepBoop(5)
+Expected output: 0 1 2 3 4 5
 
-Test: Takes a sequence of numbers and calls hasNumber() on each.
-Code: beepBoop("100, 25, 34, 5")
-Expected Output:[1, 2, 3, 5]
 
-Test: Takes a sequence of numbers and calls hasNumber() on each and then calls substitute() on the result of hasNUmber()
-Code: beepBoop("100, 25, 34, 5")
-Expected Output: ["Beep", "Boop", "Won't you be my neighbor?", 5]
+Test: calls hasNumber() on each number in the generated array
+Code: beepBoop("5")
+Expected Output: 0 1 2 3 4 5
+
+Test: calls hasNumber() on each number in the range and then calls substitute() on the result of hasNUmber()
+Code: beepBoop(5)
+Expected Output: 0 "Beep" "Boop" "Won't you be my neighbor?" 4 5
+
+

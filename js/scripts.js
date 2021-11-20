@@ -31,9 +31,13 @@ function hasNumber(number){
 }
 
 //business logic
-function beepBoop(sequence){
-  let noPunctuation = sequence.replace(/[\D]/g, " ");
-  let numberArray = noPunctuation.split(" ");
+function beepBoop(userNumber){
+  let numberArray = []
+
+  for(let i = 0; i <= userNumber; i++){
+    numberArray.push(i);
+  }
+  
   substitutedArray = numberArray.map(function(number){
     return " " + hasNumber(number);
   });
